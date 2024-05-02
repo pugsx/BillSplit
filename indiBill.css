@@ -1,0 +1,121 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button, input {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: lightgrey; /* Dark green header */
+    color: white;
+    padding: 60px;
+    text-align: center;
+    font-size: 24px;
+}
+
+header img {
+    height: 100px; /* Adjust as necessary */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.nameContainer, .receiptContainer {
+    background-color: #ffffff; /* Background color for sections */
+    border: 1px solid #ccc; /* Subtle border for delineation */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between sections */
+    padding: 20px; /* Padding inside sections */
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Maximum width */
+}
+
+#nameForm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ccc; /* Solid border with slightly emphasized thickness */
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button.green {
+    background-color: #4CAF50; /* Green color for buttons */
+    color: white;
+}
+
+.button.large {
+    width: 100%; /* Full width buttons for emphasis */
+    max-width: 600px; /* Maximum width to maintain design integrity */
+    font-size: 18px; /* Larger font for better readability */
+}
+
+button:hover {
+    opacity: 0.9; /* Slight transparency on hover for button interaction feedback */
+}
+
+ul {
+    list-style-type: none; /* No bullets for list */
+    width: 100%; /* Full width for alignment */
+}
+
+li {
+    background-color: #f9f9f9; /* Light grey background for list items */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Subtle divider between list items */
+}
+
+table {
+    width: 100%; /* Full width table for consistency */
+    border-collapse: collapse; /* Remove space between borders */
+}
+
+th, td {
+    text-align: left;
+    padding: 8px; /* Comfortable padding within cells */
+    border-bottom: 1px solid #ddd; /* Line separator for readability */
+}
+
+.totals p {
+    font-size: 16px; /* Slightly larger font size for emphasis */
+    padding: 5px; /* Padding for space */
+    border-top: 1px solid #ddd; /* Top border for separation */
+}
+
+#nextPageBtn {
+    position: fixed; /* Fixed position to pin the button */
+    left: 50%; /* Center horizontally */
+    bottom: 20px; /* Distance from the bottom */
+    transform: translateX(-50%); /* Center precisely */
+}
+
+#logo {
+    height: 100px;        /* Height of the logo */
+    width: 400px;         /* Width of the logo */
+    position: fixed;      /* Fixed positioning to stay in place during scroll */
+    top: 0;               /* Top edge aligned with the top of the viewport */
+    left: 50%;            /* Start the left edge of the logo at the center of the viewport */
+    transform: translateX(-50%); /* Shift the logo leftwards by half its width to truly center it */
+    z-index: 1000;        /* High z-index to ensure it stays on top of other content */
+  }
