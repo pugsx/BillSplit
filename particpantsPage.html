@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleParticpants.css">
+    <title>BillSplit - Add a Name</title>
+</head>
+<body>
+    
+    <header>
+        <img src="images/IMG_3716.png" id="logo">
+    </header>
+    <div class="main-container">
+        <div class="nameContainer">
+            <h2>Add a Name</h2>
+            <form id="nameForm">
+                <input type="text" id="nameInput" placeholder="Enter a name" required>
+                <button class="button green" type="submit">Add Name</button>
+            </form>
+            <ol id="nameList"></ol>
+        </div>
+        <div class="receiptContainer">
+            <h2>Receipt Details</h2>
+            <table id="receiptDetails">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Receipt items will be added here -->
+                </tbody>
+            </table>
+            <div class="totals">
+                <p id="totalTax"></p>
+                <p id="totalAmount"></p>
+            </div>
+        </div>
+    </div>
+    <button class="button green large" id="nextPageBtn">Next page</button>
+    <script src="scriptPart.js"></script>
+</body>
+</html>
+

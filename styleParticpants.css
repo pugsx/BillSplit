@@ -1,0 +1,119 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button, input {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: lightgrey; /* Dark green header */
+    color: white;
+    padding: 60px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.nameContainer, .receiptContainer {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+#nameForm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+
+}
+
+.button.green {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button.large {
+    width: 100%;
+    max-width: 600px;
+    font-size: 18px;
+    transform: translateX(-50%);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.totals p {
+    font-size: 16px;
+    padding: 5px;
+    border-top: 1px solid #ddd;
+}
+
+#logo {
+    height: 100px;        /* Height of the logo */
+    width: 400px;         /* Width of the logo */
+    position: fixed;      /* Fixed positioning to stay in place during scroll */
+    top: 0;               /* Top edge aligned with the top of the viewport */
+    left: 50%;            /* Start the left edge of the logo at the center of the viewport */
+    transform: translateX(-50%); /* Shift the logo leftwards by half its width to truly center it */
+    z-index: 1000;        /* High z-index to ensure it stays on top of other content */
+  }
+
+  #nextPageBtn{
+    position: fixed;
+    left: 50%;            /* Start the left edge of the logo at the center of the viewport */
+    transform: translateX(-50%);
+
+  }
