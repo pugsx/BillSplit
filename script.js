@@ -1,51 +1,75 @@
 const profilePic = document.getElementById("uploaded-image");
 const userFile = document.getElementById("file-path");
 const submitBtn = document.getElementById("submit-btn");
+const nextPage = document.getElementById("next-page23")
 
-// Function to simulate file input click on image click
 profilePic.onclick = function () {
-  userFile.click();
+    userFile.click();
 };
 
 userFile.onchange = function () {
-  const file = userFile.files[0];
-  if (file) {
-    profilePic.src = URL.createObjectURL(file);
-  }
-};
-
-// Function to handle the submission and API call
-const handleSubmission = () => {
-  const myFile = userFile.files[0];
-  if (!myFile) {
-    alert("Please select a file first.");
-    return;
-  }
-
-  let data = new FormData();
-  data.append("document", myFile, myFile.name);
-
-  let xhr = new XMLHttpRequest();
-
-  xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === 4) {
-      console.log(this.responseText); // This will print the raw JSON response as a string
-      try {
-        const responseJson = JSON.parse(this.responseText);
-        console.log(responseJson); // This will print the JSON object
-        // Here you can add code to update the UI with the response information
-      } catch (e) {
-        console.error("Could not parse JSON response", e);
-        // Optionally, handle the parsing error, like showing an error message to the user
-      }
+    const file = userFile.files[0];
+    if (file) {
+        profilePic.src = URL.createObjectURL(file);
     }
-  });
-
-  xhr.open("POST", "https://api.mindee.net/v1/products/mindee/expense_receipts/v5/predict");
-  xhr.setRequestHeader("Authorization", "Token 3af74b35d51fe545a07df73d3d7309a5");
-  xhr.send(data);
 };
 
+const handleSubmission = () => {
+    const myFile = userFile.files[0];
+    if (!myFile) {
+        alert("Click the receipt icon to attach file first. Then click the submit button, followed by the next page button!");
+        return;
+    }
 
-// Add event listener to the submit button
+    let data = new FormData();
+    data.append("document", myFile, myFile.name);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            try {
+                const responseJson = JSON.parse(this.responseText);
+                localStorage.setItem('receiptData', JSON.stringify(responseJson));
+                // window.location.href = "participantsPage.html"; // Redirect to participants page
+            } catch (e) {
+                console.error("Could not parse JSON response", e);
+            }
+        } else if (this.readyState === XMLHttpRequest.DONE) {
+            console.error('Request failed with status:', this.status);
+        }
+    });
+
+    xhr.open("POST", "https://api.mindee.net/v1/products/mindee/expense_receipts/v5/predict");
+    xhr.setRequestHeader("Authorization", "Token 3af74b35d51fe545a07df73d3d7309a5");
+    xhr.send(data);
+};
+
 submitBtn.addEventListener("click", handleSubmission);
+
+nextPage.addEventListener("click", function () {
+  console.log("working")
+  window.location.href = "particpantsPage.html";
+});
+
+
+
+// document.getElementById('nameForm').addEventListener('submit2', function(event) {
+//     event.preventDefault();
+//     const input = document.getElementById('nameInput');
+//     const name = input.value.trim();
+//     if (name) {
+  
+//         const li = document.createElement('li');
+//         nameArray.push(name);
+//         li.textContent = name;
+//         document.getElementById('nameList').appendChild(li);
+//         input.value = ''; // Clear input after adding
+  
+//     }
+  
+//   });
+  
+  
+  
+  

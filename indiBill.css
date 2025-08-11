@@ -1,0 +1,91 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button, input {
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Ensures text is dark enough for readability */
+}
+
+header {
+    background-color: #eee; /* Changed to grey */
+    color: #333; /* Dark text for contrast */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+header img {
+    display: block; /* Ensures the logo is a block element */
+    margin: 0 auto; /* Centers the logo */
+    height: 100px;
+    width: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px; /* Adjust based on your layout needs */
+    margin: auto;
+}
+
+.individual-bill {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%; /* Responsive width */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+}
+
+.bill-title {
+    font-size: 20px;
+    color: #333; /* Dark text for better readability */
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none; /* No bullets for list */
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px; /* Slightly larger font size for readability */
+}
+
+li:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.tax-total {
+    font-weight: bold; /* Makes totals and tax stand out */
+}
+
+#nextPageBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px; /* Space above the button */
+    width: auto;
+    position: static; /* Resetting position if previously fixed */
+}
+
+#nextPageBtn:hover {
+    background-color: #367c4f; /* Darker green on hover */
+}

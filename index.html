@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>BillSplit - Upload Your Receipt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>BillSplit - Upload Your Receipt</title>
 </head>
 <body>
-  <div class="wrapper">
-    <h2>Upload Your Receipt</h2>
-    <div class="image" id="image-upload-container">
-      <!-- The image is now clickable and will trigger the file input -->
-      <img src="images/default.png" alt="Uploaded Receipt" id="uploaded-image" style="cursor: pointer;">
+    <div>
+        <img src="images/IMG_3716.png" id="logo">
     </div>
-    <button id="submit-btn">Submit the Receipt!</button>
-    <!-- Hidden file input -->
-    <input type="file" accept="image/jpeg, image/png, image/jpg" id="file-path" class="user-file" style="display:none;">
-  </div>
+    <div class="wrapper">
+        <h2>Upload Your Receipt</h2>
+        <div class="image" id="image-upload-container">
+            <img src="images/iconBill.jpeg" alt="Uploaded Receipt" id="uploaded-image" style="cursor: pointer;">
+        </div>
+        <button id="submit-btn">Upload the Receipt!</button>
+        <button id="next-page23">Assign Items!</button>
+        <input type="file" accept="image/jpeg, image/png, image/jpg" id="file-path" class="user-file" style="display:none;">
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
