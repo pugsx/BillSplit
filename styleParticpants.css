@@ -10,9 +10,9 @@ body, button, input {
 }
 
 header {
-    background-color: lightgrey; /* Dark green header */
+    background-color: #eee; /* Dark green header */
     color: white;
-    padding: 60px;
+    padding: 30px;
     text-align: center;
     font-size: 24px;
 }
@@ -104,7 +104,7 @@ th, td {
 #logo {
     height: 100px;        /* Height of the logo */
     width: 400px;         /* Width of the logo */
-    position: fixed;      /* Fixed positioning to stay in place during scroll */
+    position: sticky;      /* Fixed positioning to stay in place during scroll */
     top: 0;               /* Top edge aligned with the top of the viewport */
     left: 50%;            /* Start the left edge of the logo at the center of the viewport */
     transform: translateX(-50%); /* Shift the logo leftwards by half its width to truly center it */
@@ -112,7 +112,7 @@ th, td {
   }
 
   #nextPageBtn{
-    position: fixed;
+    position: sticky;
     left: 50%;            /* Start the left edge of the logo at the center of the viewport */
     transform: translateX(-50%);
 

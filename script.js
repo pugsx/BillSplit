@@ -17,7 +17,7 @@ userFile.onchange = function () {
 const handleSubmission = () => {
     const myFile = userFile.files[0];
     if (!myFile) {
-        alert("Please select a file first.");
+        alert("Click the receipt icon to attach file first. Then click the submit button, followed by the next page button!");
         return;
     }
 
